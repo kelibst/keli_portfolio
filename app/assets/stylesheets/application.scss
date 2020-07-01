@@ -13,10 +13,16 @@
 
  @import 'bootstrap';
 @import './welcome';
+@import url('<link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Oswald:wght@200;300;500;700&family=Roboto+Slab:wght@100;400;900&display=swap" rel="stylesheet"> ');
 
 
+a{
+    font-family: 'Roboto Slab', sans-serif;
+}
 
-
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto Slab', sans-serif;
+}
 
  .bg{
      &-header{
@@ -97,3 +103,33 @@ h2.intro-subtitle:before{
         width: 0;
     }
 }
+
+
+/*------/ Ul resect /------*/
+.ul-resect, .socials ul, .list-ico, .blog-wrapper .post-meta ul, .box-comments .list-comments, .widget-sidebar .list-sidebar, .widget-tags ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  
+  .list-ico {
+    line-height: 2;
+  }
+  
+  .list-ico span {
+    color: #0078ff;
+    margin-right: 10px;
+  }
+  
+  /*------/ Ico Circle /------*/
+  .ico-circle {
+    height: 100px;
+    width: 100px;
+    font-size: 2rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 0 10px #0078ff;
+    display: block;
+  }

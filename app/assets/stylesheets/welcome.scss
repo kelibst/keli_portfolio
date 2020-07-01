@@ -1,4 +1,4 @@
-
+$base-color: #343a40;
 a:hover {
     color: #0078ff;
     text-decoration: none;
@@ -14,6 +14,7 @@ a:hover {
        color: rgb(90, 90, 90);
    }
 }
+
 
 /*--/ Title s /--*/
 .title-s {
@@ -60,7 +61,8 @@ a:hover {
   .lead {
 	font-size: 1.25rem;
 	font-weight: 300;
-	color: #595959;
+  color: #595959;
+  font-family: 'Oswald', sans-serif;
 }
  
 
@@ -404,9 +406,6 @@ a:hover {
 }
 
 .overlay-mf {
-  position: absolute;
-  top: 0;
-  left: 0px;
   padding: 0;
   height: 100%;
   width: 100%;
@@ -453,5 +452,68 @@ a:hover {
   color: #fff;
   box-shadow: 0 0 0 3px #cde1f8;
   transition: all 500ms ease;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+  text-align: center;
+  color: #fff;
+  padding: 25px 0;
+  background: #0062d3;
+}
+
+footer .copyright {
+  margin-bottom: .3rem;
+}
+
+footer .credits {
+  margin-bottom: 0;
+}
+
+footer .credits a {
+  color: #fff;
+}
+
+.floatup {
+	position: fixed;
+	bottom: 20px;
+	right: 50px;
+	font-size: 2rem;
+	background: $base-color;
+	padding: 0 10px;
+  border-radius: 100px;
+  z-index: 100;
+}
+.animated-h1{
+  font-family: 'Montserrat Subrayada','Oswald', sans-serif;
+}
+@media (max-width: 600px) {
+  .animated-h1{
+    font-size: 30px;
+  }
+}
+
+.custom-btn{
+  background-position: center;
+transition: background .8s;
+transition: color .8s;
+position: relative;
+overflow: hidden;
+border: 1px solid #3F4447;
+background-color: #fff;
+border-radius: 999px;
+padding: 5px 20px 5px 20px;
+color: #27292D;
+font-size: 14px;
+cursor: pointer;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,.1),0 6px 20px 0 rgba(0,0,0,.1);
+
+  &:hover{
+    background-color: rgb(54, 53, 53);
+    color: white;
+  }
 }
 

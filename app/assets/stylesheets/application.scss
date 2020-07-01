@@ -10,8 +10,13 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  */
- @import 'font_awesome5.css';
+
  @import 'bootstrap';
+@import './welcome';
+
+
+
+
 
  .bg{
      &-header{
@@ -35,6 +40,15 @@
     border-right: 0.2rem solid #777;
   }
   
+
+  .waiting {
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	transition: .3s all;
+}
+
 .header-content {
 	position: absolute;
 	top: 50%;

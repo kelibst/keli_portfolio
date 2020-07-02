@@ -15,7 +15,9 @@ a:hover {
    }
 }
 
-
+html{
+  scroll-behavior: smooth;
+}
 /*--/ Title s /--*/
 .title-s {
     font-weight: 600;
@@ -63,6 +65,21 @@ a:hover {
 	font-weight: 300;
   color: #595959;
   font-family: 'Oswald', sans-serif;
+}
+
+.overlay-header {
+	background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 0;
+	left: 0px;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	opacity: .9;
+	background-size: cover;
+	background-origin: padding-box;
+	background-attachment: fixed;
+	background-blend-mode: soft-light;
 }
  
 
@@ -489,12 +506,9 @@ footer .credits a {
 }
 .animated-h1{
   font-family: 'Montserrat Subrayada','Oswald', sans-serif;
+  white-space: pre-line;
 }
-@media (max-width: 600px) {
-  .animated-h1{
-    font-size: 30px;
-  }
-}
+
 
 .custom-btn{
   background-position: center;
@@ -514,6 +528,17 @@ box-shadow: 0 4px 8px 0 rgba(0,0,0,.1),0 6px 20px 0 rgba(0,0,0,.1);
   &:hover{
     background-color: rgb(54, 53, 53);
     color: white;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .animated-h1{
+    font-size: 30px;
+  }
+
+  .overlay-header{
+    background-position: center;
   }
 }
 

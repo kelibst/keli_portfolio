@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Letters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @letters.each do |letter| %>
+      <tr>
+        <td><%= letter.name %></td>
+        <td><%= letter.email %></td>
+        <td><%= letter.title %></td>
+        <td><%= letter.description %></td>
+        <td><%= link_to 'Show', letter %></td>
+        <td><%= link_to 'Edit', edit_letter_path(letter) %></td>
+        <td><%= link_to 'Destroy', letter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Letter', new_letter_path %>

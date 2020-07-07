@@ -24,7 +24,18 @@ html{
     color: #1e1e1e;
     font-size: 1.1rem;
   }
+.about{
 
+  &-text{
+    line-height: 2;
+    font-size: 1.3rem;
+  }
+
+  &-languages {
+    color: black;
+    line-height: 2.5rem;
+  }
+}
 
 /*--/ Title Left /--*/
 .title-box-2 {
@@ -528,6 +539,12 @@ box-shadow: 0 4px 8px 0 rgba(0,0,0,.1),0 6px 20px 0 rgba(0,0,0,.1);
   &:hover{
     background-color: rgb(54, 53, 53);
     color: white;
+  }
+
+  &-text{
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
   }
 }
 

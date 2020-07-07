@@ -1,0 +1,40 @@
+
+  <%= form_with(model: letter, local: true) do |form| %>
+  <% if letter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(letter.errors.count, "error") %> prohibited this letter from being saved:</h2>
+
+      <ul>
+        <% letter.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :title %>
+    <%= form.text_area :title, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="actions my-5">
+    <%= form.submit "Send Message", class: "custom-btn custom-btn-text w-100" %>
+  </div>
+<% end %>
+
+

@@ -2,11 +2,11 @@
   <%= form_with(model: letter, local: true) do |form| %>
   <% if letter.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(letter.errors.count, "error") %> prohibited this letter from being saved:</h2>
+      <h6 class="text-info"><%= pluralize(letter.errors.count, "error") %> prohibited this letter from being saved:</h6>
 
-      <ul>
+      <ul class="bg-danger py-4">
         <% letter.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+          <li class="text-white"><%= message %></li>
         <% end %>
       </ul>
     </div>

@@ -1,24 +1,36 @@
+<div class="container-md">
+<div class="col-md-10 mx-auto my-5">
+
+
 <p id="notice"><%= notice %></p>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">
+      <strong>Name:</strong>
+    <%= @letter.name %><br>
+    <br>
 
-<p>
-  <strong>Name:</strong>
-  <%= @letter.name %>
-</p>
+    <strong>Email:</strong>
+    <%= @letter.email %>
+    </h5>
+    <br>
 
-<p>
-  <strong>Email:</strong>
-  <%= @letter.email %>
-</p>
+    <h6 class="card-subtitle">
+      <strong>Title:</strong>
+      <%= @letter.title %>
+    </h6>
+    <br>
 
-<p>
-  <strong>Title:</strong>
-  <%= @letter.title %>
-</p>
+    <p class="card-text">
+      <strong>Description:</strong>
+      <%= @letter.description %>
+    </p>
+  </div>
+</div>
+<div class="my-5">
 
-<p>
-  <strong>Description:</strong>
-  <%= @letter.description %>
-</p>
-
-<%= link_to 'Edit', edit_letter_path(@letter) %> |
-<%= link_to 'Back', letters_path %>
+<%= link_to 'Edit', edit_letter_path(@letter), class: "custom-btn custom-btn-text" %> |
+<%= link_to 'Back', letters_path , class: "custom-btn custom-btn-text" %>
+</div>
+</div>
+</div>

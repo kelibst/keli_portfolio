@@ -1,13 +1,13 @@
-class MessageController < ApplicationController
+class MessagesController < ApplicationController
 
     def new
 
     end
 
     def create
-        @opinion = current_user.opinions.new(opinion_params)
+        @message = Message.new(message_params)
         respond_to do |format|
-            if @opinion.save
+            if @message.save
             format.html { redirect_to root_path, notice: 'Your Message was successfully sent!' }
             else
             format.html {redirect_to root_path, notice: "Sorry there was an error. Message not sent"}
@@ -18,6 +18,6 @@ class MessageController < ApplicationController
     private
 
     def message_params
-        params.require(:message).permit(:name, :email, :title, :message)
+        params.require(:message).permit(:name, :email, :title, :description)
     end
 end

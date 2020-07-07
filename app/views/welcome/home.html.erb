@@ -261,7 +261,7 @@
                   <div class="more-info">
                     <p class="lead">
                       Send me a quick email. If this is urgent You should send me a text message instead.
-                      The internet is quick a busy place I don't like to miss important emails in the crowd.
+                      The internet is quick a busy place I don't lose important emails in the crowd.
                     </p>
                     <ul class="list-ico">
                  
@@ -286,7 +286,8 @@
                     </h5>
                   </div>
                   <div>
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                    <form action="/messages" method="post" role="form" class="php-email-form">
+                    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                       <div class="row">
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
